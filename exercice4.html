@@ -6,7 +6,7 @@
 </head>
 <body>
   <form>
-    <label for="motdepasse">Votre mot de passe : </label><input type="text" name="motdepasse" value="" id="motdepasse" />
+    <label for="motdepasse">Votre mot de passe : </label><input type="text" name="motdepasse" value="" id="motdepasse" onkeyup="validate();"/>
     <label for="confirmation">Confirmez : </label><input type="text" name="confirmation" value="" id="confirmation" onkeyup="validate();"/>
     <button type="button" name="button">Vérification</button>
   </form>
@@ -15,8 +15,7 @@
       if ((document.getElementById("motdepasse").value) != (document.getElementById("confirmation").value)) {
         document.getElementById("motdepasse").style.border = "red 2px solid";
         document.getElementById("confirmation").style.border = "red 2px solid";
-      }
-      else {
+      } else {
         document.getElementById("motdepasse").style.border = "green 2px solid";
         document.getElementById("confirmation").style.border = "green 2px solid";
       };
